@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Processica test task</title>
+    <style>
+        html, body {
+        height: 100%
+        }
+    </style>
+</head>
+<body>
+<div class="container h-100 d-flex justify-content-center align-items-center">
+
+<form id="myForm" method="post" th:action="@{/result}">
+    <h1 class="d-flex justify-content-center m-5">Hello, Processica!</h1>
+    <div>
+    <textarea class="payload" rows="8" cols="30" pattern="[A-Za-zА-Яа-я]+" placeholder="input"></textarea>
+    <textarea class="result" rows="8" cols="30" placeholder="result"></textarea>
+    </div>
+    <div class="d-flex justify-content-center m-4">
+    <input class="btn-lg" type="submit" value="Proceed">
+    </div>
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>
