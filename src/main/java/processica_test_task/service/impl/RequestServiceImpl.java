@@ -19,10 +19,9 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
-    public Integer save(Request request){
+    public Request save(Request request){
         request.setStatsList(getStatsList(request));
-        requestRepository.save(request);
-        return request.getId();
+        return requestRepository.save(request);;
 
     }
     @Override
