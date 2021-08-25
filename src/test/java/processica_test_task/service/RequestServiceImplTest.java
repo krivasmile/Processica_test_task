@@ -49,15 +49,13 @@ public class RequestServiceImplTest {
 
     @Test
     void save() {
-        int id = requestServiceImpl.save(request);
-        Request requestFromDb = requestServiceImpl.findById(id);
+        Request requestFromDb = requestServiceImpl.save(request);
         Assertions.assertNotNull(requestFromDb);
     }
 
     @Test
     void findById() {
-        int id = requestServiceImpl.save(request);
-        Request requestFromDB = requestServiceImpl.findById(id);
+        Request requestFromDB = requestServiceImpl.save(request);
 
         Assertions.assertEquals(request.getId(), requestFromDB.getId());
         Assertions.assertEquals(request.getPayload(), requestFromDB.getPayload());
