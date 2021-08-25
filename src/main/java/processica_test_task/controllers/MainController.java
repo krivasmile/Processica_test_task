@@ -29,8 +29,6 @@ public class MainController {
     @PostMapping("/result")
     public List<Stats> result(@RequestBody JsonNode payload, @ModelAttribute("request") Request request ) {
         request.setPayload(payload.asText());
-        Integer id = requestServiceImpl.save(request);
-        Request requestFromDB = requestServiceImpl.findById(id);
-        return requestFromDB.getStatsList();
+        return requestServiceImpl.save(request).getStatsList();
     }
 }
