@@ -1,4 +1,4 @@
-#SOLUTION PROCESSICA TEST TASK
+TEST TASK
 
 ##Project Objective
 
